@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:juju30ans/AcceuilPage.dart';
+import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/home.dart';
 
 void main() {
@@ -17,6 +19,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomePage(),
+      routes: {
+        "/before22": (context) => Before22Page(),
+        "/acceuil": (context) => AcceuilPage(),
+      },
     );
   }
 }

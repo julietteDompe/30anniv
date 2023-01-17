@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:juju30ans/JujuPage.dart';
+import 'package:juju30ans/button.dart';
 import 'package:juju30ans/colors.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return JujuPage(
+      child: Container(
         decoration: BoxDecoration(
             gradient: RadialGradient(colors: [
           JujuColors.gradientTop,
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(flex: 1, child: Container()),
-                Expanded(flex: 4, child: Image.asset("fireworks.png")),
+                Expanded(flex: 4, child: Image.asset("images/fireworks.png")),
               ],
             ),
             SingleChildScrollView(
@@ -68,38 +69,16 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Image.asset("ballons.png"),
+                      Image.asset("images/ballons.png"),
                     ],
                   ),
                   Transform.translate(
                     offset: const Offset(0, -32),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Container(
-                        height: 48,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFF1E2CE),
-                          border: Border.all(color: Colors.black),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: Center(
-                                child: Text(
-                                  'Oh ouiiiii pardi',
-                                  style: TextStyle(
-                                    fontFamily: 'Popins',
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(height: 1, color: Colors.black)
-,                          ],
-                        ),
-                      ),
+                      child: JujuBouton('Oh ouiiiii pardi', () {
+                        Navigator.of(context).pushNamed('/before22');
+                      }),
                     ),
                   ),
                 ],
