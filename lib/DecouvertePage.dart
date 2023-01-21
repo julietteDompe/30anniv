@@ -138,7 +138,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
                         onTap: () {
                           showIndicePopUp(
                             context: context,
-                            indice1: 'yolo',
+                            indice1: 'indice1',
                             indice2: 'yolo 2',
                             infos: 'infos yolo',
                           );
@@ -228,7 +228,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
 
   void _checkMessage() {
     setState(() {
-      if (controller.text == "yoloyoloyolo") {
+      if (controller.text == "testtest") {
         _isError = false;
         _isDone = true;
       } else {
