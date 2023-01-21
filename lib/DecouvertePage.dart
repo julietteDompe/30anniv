@@ -3,9 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:juju30ans/JujuPage.dart';
 import 'package:juju30ans/button.dart';
 import 'package:juju30ans/colors.dart';
+import 'package:juju30ans/pop.dart';
+import 'package:juju30ans/juju_edit_text.dart';
 
-class DecouvertePage extends StatelessWidget {
+class DecouvertePage extends StatefulWidget {
+  @override
+  State<DecouvertePage> createState() => _DecouvertePageState();
+}
+
+class _DecouvertePageState extends State<DecouvertePage> {
   final player = AudioPlayer();
+
+  final controller = TextEditingController();
+
+  bool _isDone = false;
+
+  bool _isError = false;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +78,8 @@ class DecouvertePage extends StatelessWidget {
                     child: Stack(
                       children: [
                         Align(alignment: Alignment.bottomLeft, child: Image.asset("images/decouverte_2.png")),
-                        Align(alignment: Alignment.topCenter, child: Image.asset("images/decouverte_1.png", height: 220)),
+                        Align(
+                            alignment: Alignment.topCenter, child: Image.asset("images/decouverte_1.png", height: 220)),
                       ],
                     ),
                   ),
@@ -84,7 +98,7 @@ class DecouvertePage extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20, left: 30, right: 30),
                   child: Center(
                     child: Text(
-                     """
+                      """
 Lundi 13 novembre 1916
 
 
@@ -106,18 +120,121 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Center(child: Image.asset("images/decouverte_3.png")),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                  child: Text(
-                    'Quel message contient la lettre !?',
-                    style: TextStyle(fontFamily: 'Bodoni', fontSize: 24),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    const Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20, top: 30, bottom: 00, right: 10),
+                        child: Text(
+                          'Quel message contient la lettre !?',
+                          style: TextStyle(fontFamily: 'Bodoni', fontSize: 24),
+                        ),
+                      ),
+                    ),
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {
+                          showIndicePopUp(
+                            context: context,
+                            indice1: 'yolo',
+                            indice2: 'yolo 2',
+                            infos: 'infos yolo',
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 30),
+                          child: Image.asset("images/info.png"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(top: 25),
+                        child: Text(
+                          'Les indices si besoins',
+                          style: TextStyle(
+                            fontSize: 40,
+                            fontFamily: 'Qwitcher',
+                          ),
+                        ),
+                      ),
+                      Image.asset("images/fleche_bas.png", height: 60),
+                      const SizedBox(width: 30),
+                    ],
                   ),
                 ),
+                if (!_isDone)
+                  Padding(
+                    padding: const EdgeInsets.all(30),
+                    child: JujuEditText(
+                        onValidatePressed: () {
+                          _checkMessage();
+                        },
+                        controller: controller,
+                        hint: 'LE MESSAGE'),
+                  ),
+                if (_isError)
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    child: Text(
+                      'Ah non ! retente ta chance',
+                      style: TextStyle(fontFamily: 'Bodoni', fontSize: 24),
+                    ),
+                  ),
+                if (_isError) const SizedBox(height: 20),
+                if (!_isDone)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 30),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        width: 160,
+                        child: JujuBouton("Check", () {
+                          _checkMessage();
+                        }),
+                      ),
+                    ),
+                  ),
+                if (_isDone)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 30),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        width: 240,
+                        child: JujuBouton("ON PASSE À LA SUITE", () {
+                          Navigator.of(context).pushNamed('/');
+                        }),
+                      ),
+                    ),
+                  ),
+                const SizedBox(height: 60),
               ],
             ),
           ),
         ],
       ),
     );
+  }
+
+  void _checkMessage() {
+    setState(() {
+      if (controller.text == "yoloyoloyolo") {
+        _isError = false;
+        _isDone = true;
+      } else {
+        _isError = true;
+      }
+      controller.text = '';
+    });
   }
 }
