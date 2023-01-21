@@ -10,6 +10,7 @@ class AcceuilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
+      level: 1,
       child: Stack(
         children: [
           SingleChildScrollView(

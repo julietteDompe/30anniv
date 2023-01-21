@@ -8,6 +8,7 @@ class Before22Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
+      level: 0,
         child: Container(
       decoration: BoxDecoration(
           gradient: RadialGradient(colors: [
