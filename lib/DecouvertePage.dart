@@ -214,7 +214,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
                       child: Container(
                         width: 240,
                         child: JujuBouton("ON PASSE À LA SUITE", () {
-                          Navigator.of(context).pushNamed('/');
+                          Navigator.of(context).pushNamed('/transports');
                         }),
                       ),
                     ),

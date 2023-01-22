@@ -197,7 +197,7 @@ class _TransportsPageState extends State<TransportsPage> {
                     padding: const EdgeInsets.all(30),
                     child: JujuEditText(
                         onValidatePressed: () {
-                          _checkMessage1();
+                          _checkMessage();
                         },
                         controller: controller2,
                         hint: 'RÉPONSE'),
@@ -219,7 +219,7 @@ class _TransportsPageState extends State<TransportsPage> {
                       child: Container(
                         width: 160,
                         child: JujuBouton("Check", () {
-                          _checkMessage();
+                          _checkMessage1();
                         }),
                       ),
                     ),
@@ -245,7 +245,7 @@ class _TransportsPageState extends State<TransportsPage> {
                       child: Container(
                         width: 240,
                         child: JujuBouton("ON PASSE À LA SUITE", () {
-                          Navigator.of(context).pushNamed('/');
+                          Navigator.of(context).pushNamed('/finito');
                         }),
                       ),
                     ),

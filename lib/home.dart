@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: JujuBouton('OH OUI PARDI', () {
-                        Navigator.of(context).pushNamed('/before22');
+                        Navigator.of(context).pushNamed('/topo');
                       }),
                     ),
                   ),
