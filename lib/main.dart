@@ -5,6 +5,7 @@ import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:juju30ans/topo.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         "/before22": (context) => Before22Page(),
         "/acceuil": (context) => AcceuilPage(),
         "/decouverte_yolo_1": (context) => DecouvertePage(),
+        "/topo": (context) => topoPage(),
         "/transports": (context) => TransportsPage(),
       },
     );
