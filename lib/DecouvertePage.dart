@@ -230,7 +230,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
 
   void _checkMessage() {
     setState(() {
-      if (controller.text == "testtest" || controller.text == "yoloyolo" || controller.text == "Test") {
+      if (controller.text.toLowerCase() == "gare de lyon consigne 45") {
         _bumpCode();
         _isError = false;
         _isDone = true;
