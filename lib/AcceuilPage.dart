@@ -107,6 +107,7 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                     style: TextStyle(
                       fontFamily: 'Savoye',
                       fontSize: 24,
+                      letterSpacing: 6,
                     ),
                   ),
                 ),

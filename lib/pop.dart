@@ -67,7 +67,9 @@ class _IndicesState extends State<_Indices> {
               ),
             ),
           ),
-          if (indice1Open) Text(widget.indice1, style: TextStyle(fontFamily: 'Savoye', fontSize: 24)),
+          if (indice1Open) Padding(
+            padding: EdgeInsets.all(15),
+            child: Text(widget.indice1, style: TextStyle(fontFamily: 'Savoye', fontSize: 24))),
           Center(child: Container(width: 140, height: 1, color: Colors.black12)),
           Material(
             color: Colors.transparent,
@@ -90,7 +92,9 @@ class _IndicesState extends State<_Indices> {
               ),
             ),
           ),
-          if (indice2Open) Text(widget.indice2, style: TextStyle(fontFamily: 'Savoye', fontSize: 24)),
+          if (indice2Open) Padding(
+              padding: EdgeInsets.all(15),
+              child: Text(widget.indice2, style: TextStyle(fontFamily: 'Savoye', fontSize: 24))),
           Center(child: Container(width: 140, height: 1, color: Colors.black12)),
           Material(
             color: Colors.transparent,
@@ -113,7 +117,9 @@ class _IndicesState extends State<_Indices> {
               ),
             ),
           ),
-          if (infosOpen) Text(widget.infos, style: TextStyle(fontFamily: 'Savoye', fontSize: 24)),
+          if (infosOpen) Padding(
+    padding: EdgeInsets.all(15),
+    child: Text(widget.infos, style: TextStyle(fontFamily: 'Savoye', fontSize: 24))),
         ],
       ),
     );
