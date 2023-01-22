@@ -228,7 +228,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
 
   void _checkMessage() {
     setState(() {
-      if (controller.text == "testtest") {
+      if (controller.text == "testtest" || controller.text == "yoloyolo" || controller.text == "Test") {
         _isError = false;
         _isDone = true;
       } else {
