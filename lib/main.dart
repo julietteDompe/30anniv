@@ -3,9 +3,11 @@ import 'package:juju30ans/AcceuilPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
+import 'package:juju30ans/finito.dart';
 import 'package:juju30ans/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:juju30ans/topo.dart';
+
 import 'firebase_options.dart';
 
 void main() async {
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
         "/acceuil": (context) => AcceuilPage(),
         "/decouverte_yolo_1": (context) => DecouvertePage(),
         "/topo": (context) => topoPage(),
+        "/finito": (context) => finitoPage(),
         "/transports": (context) => TransportsPage(),
       },
     );
