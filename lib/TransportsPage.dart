@@ -219,7 +219,7 @@ class _TransportsPageState extends State<TransportsPage> {
                       child: Container(
                         width: 160,
                         child: JujuBouton("Check", () {
-                          _checkMessage1();
+                          _checkMessage();
                         }),
                       ),
                     ),

@@ -229,14 +229,14 @@ class _ChapitresPageState extends State<ChapitresPage> {
         userLevel = (doc.data()["levelUnlocked"] as int);
       }
       switch (userLevel) {
-        case 0:
+        case 1:
           Navigator.of(context).pushNamed('/decouverte_yolo_1');
           break;
-        case 1:
+        case 2:
           Navigator.of(context).pushNamed("/transports");
           break;
         default:
-          Navigator.of(context).pushNamed("/chapitres");
+          Navigator.of(context).pushNamed("/finito");
           break;
       }
     });
