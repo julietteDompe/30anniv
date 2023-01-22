@@ -261,7 +261,8 @@ class _TransportsPageState extends State<TransportsPage> {
 
   void _checkMessage() {
     setState(() {
-      if (controller2.text.toLowerCase().contains("basilique du sacré coeur") || controller2.text.toLowerCase().contains("sacré coeur") || controller2.text.toLowerCase().contains("sacre coeur")) {
+      if (controller.text.toLowerCase().contains("coeur")
+          || controller.text.toLowerCase().contains("coeur de Legentil")) {
         _bumpCode();
         _isError = false;
         _isDone = true;
@@ -274,7 +275,9 @@ class _TransportsPageState extends State<TransportsPage> {
 
   void _checkMessage1() {
     setState(() {
-      if (controller.text.toLowerCase().contains("coeur")|| controller.text.toLowerCase().contains("coeur de Legentil")) {
+      if (controller2.text.toLowerCase().contains("basilique du sacré coeur")
+          || controller2.text.toLowerCase().contains("sacré coeur")
+          || controller2.text.toLowerCase().contains("sacre coeur")) {
         _isError = false;
         _isDone1 = true;
       } else {
