@@ -20,7 +20,7 @@ class JujuPage extends StatefulWidget {
 }
 
 class _JujuPageState extends State<JujuPage> {
-  int userLevel = 0;
+  int userLevel = -1;
   final TextEditingController controller = TextEditingController();
 
   @override
@@ -35,7 +35,6 @@ class _JujuPageState extends State<JujuPage> {
       for (var doc in event.docs) {
         setState(() {
           userLevel = (doc.data()["levelUnlocked"] as int);
-          print(userLevel);
         });
       }
     });

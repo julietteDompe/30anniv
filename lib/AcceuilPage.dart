@@ -1,10 +1,17 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:juju30ans/CodeRepository.dart';
 import 'package:juju30ans/JujuPage.dart';
 import 'package:juju30ans/button.dart';
 import 'package:juju30ans/colors.dart';
 
-class AcceuilPage extends StatelessWidget {
+class AcceuilPage extends StatefulWidget {
+  @override
+  State<AcceuilPage> createState() => _AcceuilPageState();
+}
+
+class _AcceuilPageState extends State<AcceuilPage> {
   final player = AudioPlayer();
 
   @override
@@ -117,7 +124,9 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                     alignment: Alignment.topRight,
                     child: SizedBox(
                       width: 160,
-                      child: JujuBouton('LA SUITE', () {}),
+                      child: JujuBouton('LA SUITE', () {
+                        _launchNextEnigme(context);
+                      }),
                     ),
                   ),
                 ),
@@ -134,15 +143,21 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed("/chapitres");
+                      },
                       child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset("images/chapitres.png"),
-                      const SizedBox(height: 4),
-                      const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                      const SizedBox(height: 8),
-                    ],
-                  )),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Image.asset("images/chapitres.png"),
+                          const SizedBox(height: 4),
+                          const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
+                          const SizedBox(height: 8),
+                        ],
+                      ),
+                    ),
+                  ),
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
@@ -151,29 +166,29 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                       )),
                   Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                    child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(boxShadow: [
-                          BoxShadow(
-                            color: JujuColors.gradientBottom,
-                            offset: const Offset(
-                              5.0,
-                              5.0,
-                            ),
-                            blurRadius: 10.0,
-                            spreadRadius: 2.0,
-                          ),
-                        ]),
-                        child: Transform.translate(
-                          offset: const Offset(0, 5),
-                          child: const Align(
-                            alignment: Alignment.bottomCenter,
-                            child: Text('START',
-                                style: TextStyle(fontFamily: 'Popins', fontSize: 12, fontWeight: FontWeight.w700)),
-                          ),
-                        )),
-                  )),
+                        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                        child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(
+                                color: JujuColors.gradientBottom,
+                                offset: const Offset(
+                                  5.0,
+                                  5.0,
+                                ),
+                                blurRadius: 10.0,
+                                spreadRadius: 2.0,
+                              ),
+                            ]),
+                            child: Transform.translate(
+                              offset: const Offset(0, 5),
+                              child: const Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text('START',
+                                    style: TextStyle(fontFamily: 'Popins', fontSize: 12, fontWeight: FontWeight.w700)),
+                              ),
+                            )),
+                      )),
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
@@ -182,24 +197,56 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                       )),
                   Expanded(
                       child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset("images/sac.png"),
-                      const SizedBox(height: 4),
-                      const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                      const SizedBox(height: 8),
-                    ],
-                  )),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Image.asset("images/sac.png"),
+                          const SizedBox(height: 4),
+                          const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
+                          const SizedBox(height: 8),
+                        ],
+                      )),
                 ],
               ),
             ),
           ),
-          Align(alignment: Alignment.bottomCenter, child: Padding(
-            padding: const EdgeInsets.only(bottom: 35),
-            child: Image.asset("images/play_button.png"),
-          ))
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {
+                  _launchNextEnigme(context);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 35),
+                  child: Image.asset("images/play_button.png"),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
+  }
+
+  void _launchNextEnigme(BuildContext context) {
+    int userLevel = 0;
+    final db = FirebaseFirestore.instance;
+    db.collection("users").where("code", isEqualTo: CodeRepository.instance.code).get().then((event) {
+      for (var doc in event.docs) {
+        userLevel = (doc.data()["levelUnlocked"] as int);
+      }
+      switch (userLevel) {
+        case 0:
+          Navigator.of(context).pushNamed('/decouverte_yolo_1');
+          break;
+        case 1:
+          Navigator.of(context).pushNamed("/transports");
+          break;
+        default:
+          Navigator.of(context).pushNamed("/chapitres");
+          break;
+      }
+    });
   }
 }

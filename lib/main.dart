@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:juju30ans/AcceuilPage.dart';
+import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
+import 'package:juju30ans/colors.dart';
 import 'package:juju30ans/finito.dart';
 import 'package:juju30ans/home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,7 +29,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: MaterialColor(0xFFF9F3E7, <int, Color>{
+          50: JujuColors.gradientBottom,
+          100: JujuColors.gradientBottom,
+          200: JujuColors.gradientBottom,
+          300: JujuColors.gradientBottom,
+          400: JujuColors.gradientBottom,
+          500: JujuColors.gradientBottom,
+          600: JujuColors.gradientBottom,
+          700: JujuColors.gradientBottom,
+          800: JujuColors.gradientBottom,
+          900: JujuColors.gradientBottom,
+        }),
       ),
       home: HomePage(),
       routes: {
@@ -37,6 +50,7 @@ class MyApp extends StatelessWidget {
         "/topo": (context) => topoPage(),
         "/finito": (context) => finitoPage(),
         "/transports": (context) => TransportsPage(),
+        "/chapitres": (context) => ChapitresPage(),
       },
     );
   }
