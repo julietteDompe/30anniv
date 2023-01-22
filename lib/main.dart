@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:juju30ans/AcceuilPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
+import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         "/before22": (context) => Before22Page(),
         "/acceuil": (context) => AcceuilPage(),
         "/decouverte_yolo_1": (context) => DecouvertePage(),
+        "/transports": (context) => TransportsPage(),
       },
     );
   }

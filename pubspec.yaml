@@ -53,3 +53,5 @@ flutter:
     - assets/images/fleche_haut.png
     - assets/images/play_button.png
     - assets/test_audio.mp4
+    - assets/Chap1.m4a
+    - assets/Chap2.m4a

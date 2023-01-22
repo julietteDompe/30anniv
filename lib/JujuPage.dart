@@ -35,6 +35,7 @@ class _JujuPageState extends State<JujuPage> {
       for (var doc in event.docs) {
         setState(() {
           userLevel = (doc.data()["levelUnlocked"] as int);
+          print(userLevel);
         });
       }
     });
