@@ -71,7 +71,7 @@ class _TransportsPageState extends State<TransportsPage> {
                   padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                   child: Text(
                     'Je me rends à la gare avec le ticket pour récupérer le contenu de la consigne 45 !\nJ’y trouve une petite boîte en bois. Dedans se trouvent un collier et un bout de papier chiffonné.',
-                    style: TextStyle(fontFamily: 'Savoye', fontSize: 24, letterSpacing: 6),
+                    style: TextStyle(fontFamily: 'Savoye', fontSize: 22, letterSpacing: 6),
                   ),
                 ),
                 Padding(
@@ -84,7 +84,7 @@ class _TransportsPageState extends State<TransportsPage> {
                     'Sur le collier encore le même symbole que dans la lettre : c’est un médaillon familial qui s’ouvre. D’un côté une inscription 23.12 et de l’autre une photo.',
                     style: TextStyle(
                       fontFamily: 'Savoye',
-                      fontSize: 24,
+                      fontSize: 22,
                       letterSpacing: 6,
                     ),
                   ),
@@ -99,7 +99,7 @@ class _TransportsPageState extends State<TransportsPage> {
                     'Sur le papier chiffonné est écrit : « le sacré doit être protégé, rapprochez-vous de Legentil, en son cœur le chemin s’éclairera »',
                     style: TextStyle(
                       fontFamily: 'Savoye',
-                      fontSize: 24,
+                      fontSize: 22,
                       letterSpacing: 6,
                     ),
                   ),
@@ -114,7 +114,7 @@ class _TransportsPageState extends State<TransportsPage> {
                     'Il faut que je trouve qui est ce Legentil et où le trouver ?',
                     style: TextStyle(
                       fontFamily: 'Savoye',
-                      fontSize: 24,
+                      fontSize: 22,
                       letterSpacing: 6,
                     ),
                   ),
@@ -137,9 +137,9 @@ class _TransportsPageState extends State<TransportsPage> {
                         onTap: () {
                           showIndicePopUp(
                             context: context,
-                            indice1: 'Qui est legentil on est en 1916?',
-                            indice2: 'À quoi a t\'il participé ?',
-                            infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+                            indice1: 'Qui est legentil ? on est en 1916...',
+                            indice2: 'Regarde la photo du medaillon, elle peut t\'aider',
+                            infos: 'Le fameux Alexandre Legentil',
                           );
                         },
                         child: Padding(
@@ -239,7 +239,7 @@ class _TransportsPageState extends State<TransportsPage> {
                   ),
                 if (_isDone)
                   Padding(
-                    padding: const EdgeInsets.only(right: 30),
+                    padding: const EdgeInsets.only(right: 30, top: 30),
                     child: Align(
                       alignment: Alignment.topRight,
                       child: Container(
@@ -277,6 +277,8 @@ class _TransportsPageState extends State<TransportsPage> {
     setState(() {
       if (controller.text.toLowerCase().contains("basilique du sacré coeur")
           || controller.text.toLowerCase().contains("sacré coeur")
+          || controller.text.toLowerCase().contains("sacré-coeur")
+          || controller.text.toLowerCase().contains("sacre-coeur")
           || controller.text.toLowerCase().contains("sacre coeur")) {
         _isError = false;
         _isDone1 = true;

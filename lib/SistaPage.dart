@@ -33,7 +33,7 @@ class _SistaPageState extends State<SistaPage> {
             const SizedBox(height: 20),
             const ParagrapheEnigme('L’agencement me fait penser à qqch. Mais oui! le plan qui était conservé dans le journal !'),
             const SizedBox(height: 20),
-            const ImageEnigme("images/sista3.png"),
+            const ImageEnigme("images/sista3.jpg"),
             const SizedBox(height: 20),
             const QuestionEnigme(
               question: 'Ou dois-je regarder ?',

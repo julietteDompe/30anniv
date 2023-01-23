@@ -41,7 +41,7 @@ class _FetePageState extends State<FetePage> {
               infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
             ),
             if (!_isDone) AnswerBlock(
-              hint: 'hint',
+              hint: 'L\'ENDROIT',
               condition: _condition,
               controller: controller,
               onSuccess: _onSuccess,
@@ -49,7 +49,7 @@ class _FetePageState extends State<FetePage> {
             ),
             if (_isDone) const SizedBox(height: 20),
             if (_isDone)
-              const ParagrapheEnigme("Exactement sur la terrasse du moulin on retrouve le symbole de la première lettre. \nJe me rends donc sur la terrasse du moulin. Sur la rambarde du balcon, le même symbole est gravé. En touchant le symbole, je me rend compte qu’il y a du jeu entre le barreau et la structure. Le barreau se dévisse, il est creux.\nDedans, je trouve un petit sac en tissus avec des tampons d’imprimerie en bronze pour m’indiquer le lieu suivant"),
+              const ParagrapheEnigme("Exactement sur la terrasse du moulin, on retrouve le symbole de la première lettre. \nJe me rends donc sur la terrasse du moulin. Sur la rambarde du balcon, le même symbole est gravé. En touchant le symbole, je me rend compte qu’il y a du jeu entre le barreau et la structure. Le barreau se dévisse, il est creux.\nDedans, je trouve un petit sac en tissus avec des tampons d’imprimerie en bronze pour m’indiquer le lieu suivant"),
             if (_isDone) const SizedBox(height: 40),
             if (_isDone) const ParagrapheEnigme('e a s t é e g r l n i i e i s p r'),
             if (_isDone) const SizedBox(height: 40),
@@ -86,7 +86,9 @@ class _FetePageState extends State<FetePage> {
   }
 
   bool _condition2(String reponse) {
-    return (reponse.toLowerCase().contains('eglise saint pierre') || reponse.toLowerCase().contains('église saint pierre')) ;
+    return (reponse.toLowerCase().contains('eglise saint pierre')
+        || reponse.toLowerCase().contains('église saint pierre')
+        || reponse.toLowerCase().contains('église saint-pierre')) ;
   }
 
   void _onSuccess2() {

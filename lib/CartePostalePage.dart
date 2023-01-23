@@ -23,7 +23,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
             AudioButton('Chap6.m4a'),
             const SizedBox(height: 20),
             const ParagrapheEnigme(
-                'Effectivement, je découvre dans le pilier 23.12, sur une des pierres de la colonne le symbole du blason. Elle ne semble pas scellée, je la retire et y trouve une carte postale.'),
+                'Effectivement, je découvre dans le sacristie, sur une des pierres de la colonne centrale, le symbole du même blason. Elle ne semble pas scellée, je la retire et y trouve une carte postale.'),
             const SizedBox(height: 20),
             const ImageEnigme("images/postale1.png"),
             const SizedBox(height: 20),
@@ -37,7 +37,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
               question: 'Quel est le message de droite ?',
               indice1: "Il y a surement un objet qui peut m\'aider à déchiffrer. La partie gauche servira plus tard",
               indice2: 'La roue tourne',
-              infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+              infos: 'Tu veux pas la réponse non plus ...',
             ),
             if (!_isDone) AnswerBlock(
               hint: 'MSG',

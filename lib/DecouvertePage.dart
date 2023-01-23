@@ -70,7 +70,7 @@ class _DecouvertePageState extends State<DecouvertePage> {
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                   child: Text(
                     'A mon retour, j’ouvre ce livre et je découvre coincé dans la couverture en cuir, un plan, une roue avec une correspondance alphabétique et une feuille noire avec des trous (regarde ton sac!).',
-                    style: TextStyle(fontFamily: 'Savoye', fontSize: 24, letterSpacing: 6,),
+                    style: TextStyle(fontFamily: 'Savoye', fontSize: 24, letterSpacing: 4,),
                   ),
                 ),
                 Padding(
@@ -114,7 +114,7 @@ Ptt
 Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvre l’enveloppe, j’y trouve un ticket et une lettre.
 Évidemment, en temps de guerre nous envoyons nos messages de manière codée. 
                      """,
-                      style: TextStyle(fontFamily: 'Savoye', fontSize: 24, letterSpacing: 6,),
+                      style: TextStyle(fontFamily: 'Savoye', fontSize: 22, letterSpacing: 6,),
                     ),
                   ),
                 ),
@@ -142,7 +142,7 @@ Ce bureau étant tenu secret, qui pouvait bien adresser cette lettre !? J’ouvr
                             context: context,
                             indice1: 'Regarde la 1ere et la derniere lettre.',
                             indice2: 'Continues en faisant des allers retours',
-                            infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+                            infos: 'Rendez-vous Vendredi 27 janvier pour mon birthday les lapinous',
                           );
                         },
                         child: Padding(

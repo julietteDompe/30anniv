@@ -51,7 +51,7 @@ class topoPage extends StatelessWidget {
                         'Ps : Vous n’avez pas besoin de vous déplacer pour trouver les solutions ',
                         style: TextStyle(
                           fontFamily: 'Qwitcher',
-                          fontSize: 16,
+                          fontSize: 20,
                           letterSpacing: 4,
                       ),
                     ),

@@ -52,10 +52,10 @@ class _MontagnePageState extends State<MontagnePage> {
             const ParagrapheEnigme(
                 "Dans une croix gravée dans le mur de marbre positionné derrière l’urne, un morceau de papier dépasse. J’y découvre un rouleau. Il s’agit d’une peinture"),
             const SizedBox(height: 20),
-            ImageEnigme("images/montagne5.png"),
+            ImageEnigme("images/montagne5.jpg"),
             const SizedBox(height: 20),
             const QuestionEnigme(
-              question: 'Qui a réalisé cette peinture et quel est son nom ?',
+              question: 'Qui a réalisé cette peinture ?',
               indice1: 'Il a vécu à Montmartre pdt 2 ans en 1886',
               indice2: 'Ce tableau séjourne au musée des beaux art d’Argentine',
               infos: 'Il se serait coupé l’oreille et vient des pays bas',
@@ -70,10 +70,10 @@ class _MontagnePageState extends State<MontagnePage> {
               ),
             if (_isDone) const SizedBox(height: 20),
             if (_isDone) const QuestionEnigme(
-              question: 'Quel est le nom du tableau',
+              question: 'Quel est le nom du tableau ?',
               indice1: 'Il y a un moulin sur le tableau',
               indice2: 'En vrai, fais un effort',
-              infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+              infos: 'Passe chez l\'opticien, là c\'est grave!',
             ),
             if (_isDone && !_isDone2) AnswerBlock(
               hint: 'LE NOM DU TABLEAU',
@@ -183,7 +183,7 @@ class ParagrapheEnigme extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Text(
         label,
-        style: const TextStyle(fontFamily: 'Savoye', fontSize: 24, letterSpacing: 6),
+        style: const TextStyle(fontFamily: 'Savoye', fontSize: 22, letterSpacing: 6),
       ),
     );
   }
@@ -299,7 +299,7 @@ class _AnswerBlockState extends State<AnswerBlock> {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              'Ah non ! retente ta chance',
+              'Nope, tu le fais exprès',
               style: TextStyle(fontFamily: 'Bodoni', fontSize: 24),
             ),
           ),
@@ -360,7 +360,7 @@ class NextButton extends StatelessWidget {
         alignment: Alignment.topRight,
         child: SizedBox(
           width: 240,
-          child: JujuBouton("ON PASSE À LA SUITE", () {
+          child: JujuBouton("ALLER NEXT", () {
             Navigator.of(context).pushNamed(nextPage);
           }),
         ),
