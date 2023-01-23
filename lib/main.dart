@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:juju30ans/AcceuilPage.dart';
 import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
+import 'package:juju30ans/MontagnePage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/colors.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         "/finito": (context) => finitoPage(),
         "/transports": (context) => TransportsPage(),
         "/chapitres": (context) => ChapitresPage(),
+        "/montagne": (context) => MontagnePage(),
       },
     );
   }

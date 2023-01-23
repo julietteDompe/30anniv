@@ -245,7 +245,7 @@ class _TransportsPageState extends State<TransportsPage> {
                       child: Container(
                         width: 240,
                         child: JujuBouton("ON PASSE À LA SUITE", () {
-                          Navigator.of(context).pushNamed('/finito');
+                          Navigator.of(context).pushNamed('/montagne');
                         }),
                       ),
                     ),
@@ -261,8 +261,8 @@ class _TransportsPageState extends State<TransportsPage> {
 
   void _checkMessage() {
     setState(() {
-      if (controller.text.toLowerCase().contains("coeur")
-          || controller.text.toLowerCase().contains("coeur de Legentil")) {
+      if (controller2.text.toLowerCase().contains("coeur")
+          || controller2.text.toLowerCase().contains("coeur de Legentil")) {
         _bumpCode();
         _isError = false;
         _isDone = true;
@@ -275,9 +275,9 @@ class _TransportsPageState extends State<TransportsPage> {
 
   void _checkMessage1() {
     setState(() {
-      if (controller2.text.toLowerCase().contains("basilique du sacré coeur")
-          || controller2.text.toLowerCase().contains("sacré coeur")
-          || controller2.text.toLowerCase().contains("sacre coeur")) {
+      if (controller.text.toLowerCase().contains("basilique du sacré coeur")
+          || controller.text.toLowerCase().contains("sacré coeur")
+          || controller.text.toLowerCase().contains("sacre coeur")) {
         _isError = false;
         _isDone1 = true;
       } else {
@@ -294,7 +294,7 @@ class _TransportsPageState extends State<TransportsPage> {
         final userLevel = (doc.data()["levelUnlocked"] as int);
         if (userLevel < 3) {
           db.collection("users").doc(doc.id).set({
-            "levelUnlocked": 2,
+            "levelUnlocked": 3,
             "code": CodeRepository.instance.code,
           });
         }

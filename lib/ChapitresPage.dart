@@ -12,7 +12,6 @@ class ChapitresPage extends StatefulWidget {
 }
 
 class _ChapitresPageState extends State<ChapitresPage> {
-
   int userLevel = 0;
 
   @override
@@ -71,18 +70,20 @@ class _ChapitresPageState extends State<ChapitresPage> {
                             Expanded(
                               child: Padding(
                                 padding: EdgeInsets.all(30),
-                                child: Text('I - LA DECOUVERTE', style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: 'Bodoni',
-                                )),
+                                child: Text('I - LA DECOUVERTE',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontFamily: 'Bodoni',
+                                    )),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsets.all(30),
-                              child: Text('>', style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: 'Bodoni',
-                              )),
+                              child: Text('>',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: 'Bodoni',
+                                  )),
                             )
                           ],
                         ),
@@ -92,41 +93,82 @@ class _ChapitresPageState extends State<ChapitresPage> {
                 ),
                 if (userLevel >= 2)
                   Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                  child: Container(
-                    color: Colors.black,
-                    padding: const EdgeInsets.all(1),
-                    child: Material(
-                      color: Colors.white,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed("/transports");
-                        },
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: const [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.all(30),
-                                child: Text('I - LES TRANSPORTS', style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: 'Bodoni',
-                                )),
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                    child: Container(
+                      color: Colors.black,
+                      padding: const EdgeInsets.all(1),
+                      child: Material(
+                        color: Colors.white,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("/transports");
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: const [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.all(30),
+                                  child: Text('I - LES TRANSPORTS',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontFamily: 'Bodoni',
+                                      )),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(30),
-                              child: Text('>', style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: 'Bodoni',
-                              )),
-                            )
-                          ],
+                              Padding(
+                                padding: EdgeInsets.all(30),
+                                child: Text('>',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontFamily: 'Bodoni',
+                                    )),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
+                if (userLevel >= 3)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                    child: Container(
+                      color: Colors.black,
+                      padding: const EdgeInsets.all(1),
+                      child: Material(
+                        color: Colors.white,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("/montagne");
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: const [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.all(30),
+                                  child: Text('III - LA MONTAGNE',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontFamily: 'Bodoni',
+                                      )),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(30),
+                                child: Text('>',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontFamily: 'Bodoni',
+                                    )),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
               ],
             ),
           ),
@@ -234,6 +276,9 @@ class _ChapitresPageState extends State<ChapitresPage> {
           break;
         case 2:
           Navigator.of(context).pushNamed("/transports");
+          break;
+        case 3:
+          Navigator.of(context).pushNamed("/montagne");
           break;
         default:
           Navigator.of(context).pushNamed("/finito");

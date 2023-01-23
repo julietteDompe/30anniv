@@ -243,6 +243,9 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
         case 2:
           Navigator.of(context).pushNamed("/transports");
           break;
+        case 3:
+          Navigator.of(context).pushNamed("/montagne");
+          break;
         default:
           Navigator.of(context).pushNamed("/finito");
           break;
