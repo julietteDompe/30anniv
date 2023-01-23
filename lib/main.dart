@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:juju30ans/AcceuilPage.dart';
+import 'package:juju30ans/CartePostalePage.dart';
 import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
 import 'package:juju30ans/FetePage.dart';
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         "/montagne": (context) => MontagnePage(),
         "/fete": (context) => FetePage(),
         "/sista": (context) => SistaPage(),
+        "/carte_postale": (context) => CartPostalePage(),
       },
     );
   }
