@@ -76,7 +76,7 @@ class _FetePageState extends State<FetePage> {
   }
 
   bool _condition(String reponse) {
-    return (reponse.toLowerCase().contains('la terrasse') || reponse.toLowerCase().contains('le balcon')  || reponse.toLowerCase().contains('le toit'));
+    return (reponse.toLowerCase().contains('terrasse') || reponse.toLowerCase().contains('balcon')  || reponse.toLowerCase().contains('toit'));
   }
 
   void _onSuccess() {
