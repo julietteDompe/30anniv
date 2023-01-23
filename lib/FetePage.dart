@@ -25,7 +25,7 @@ class _FetePageState extends State<FetePage> {
             AudioButton('Chap4.m4a'),
             const SizedBox(height: 20),
             const ParagrapheEnigme(
-                'Le Moulin de la Galette ne désigne pas un moulin à proprement parlé mais le bal public ouvert par la famille Debray, meuniers historiques de la Butte. Le moulin changera souvent d’emplacement dù à l’urbanisation de Paris (au gré des mesures d’alignement de la rue). '),
+                'Le Moulin de la Galette ne désigne pas un moulin à proprement parler mais le bal public ouvert par la famille Debray, meuniers historiques de la Butte. Le moulin changera souvent d’emplacement dù à l’urbanisation de Paris (au gré des mesures d’alignement de la rue). '),
             const SizedBox(height: 20),
             const ImageEnigme("images/fete1.png"),
             const SizedBox(height: 20),

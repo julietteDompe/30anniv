@@ -14,7 +14,9 @@ class MontagnePage extends StatefulWidget {
 
 class _MontagnePageState extends State<MontagnePage> {
   final controller = TextEditingController();
+  final controller2 = TextEditingController();
   bool _isDone = false;
+  bool _isDone2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -67,11 +69,25 @@ class _MontagnePageState extends State<MontagnePage> {
                 levelToUnlock: 4,
               ),
             if (_isDone) const SizedBox(height: 20),
-            if (_isDone)
+            if (_isDone) const QuestionEnigme(
+              question: 'Quel est le nom du tableau',
+              indice1: 'Il y a un moulin sur le tableau',
+              indice2: 'En vrai, fais un effort',
+              infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+            ),
+            if (_isDone && !_isDone2) AnswerBlock(
+              hint: 'LE NOM DU TABLEAU',
+              condition: _condition2,
+              controller: controller2,
+              onSuccess: _onSuccess2,
+              levelToUnlock: 4,
+            ),
+            if (_isDone2) const SizedBox(height: 20),
+            if (_isDone2)
               const ParagrapheEnigme(
-                  "OK, donc rendons-nous dans cette direction : le Moulin de la Galette.. \nIl semblerait que ce Legentil soit un des protecteurs du coeur de Jésus au sens figuré : il a fait construire le Sacré-Cœur qui est une dévotion au cœur de Jésus-Christ, en tant que symbole de l'amour divin par lequel le fils de Dieu a pris la nature humaine et a donné sa vie pour les hommes. \nMais également au sens propre, une rumeur circule que la relique du coeur de Jésus est protégée par des organisations secrètes. Le coeur du divin ... qui proférerait la vie éternelle. Une des reliques les plus convoitées dans ce monde. Imaginez le entre de mauvaises mains.\nIl semblerait que l’une des raisons de la création du Sacré Coeur fut de mettre en sécurité ce coeur en cette période."),
-            if (_isDone) const SizedBox(height: 20),
-            if (_isDone) const NextButton('/fete'),
+                  "OK, donc rendons-nous dans cette direction : le Moulin de la Galette (ou Moulin du Blute-Fin) .. \nIl semblerait que ce Legentil soit un des protecteurs du coeur de Jésus au sens figuré : il a fait construire le Sacré-Cœur qui est une dévotion au cœur de Jésus-Christ, en tant que symbole de l'amour divin par lequel le fils de Dieu a pris la nature humaine et a donné sa vie pour les hommes. \nMais également au sens propre, une rumeur circule que la relique du coeur de Jésus est protégée par des organisations secrètes. Le coeur du divin ... qui proférerait la vie éternelle. Une des reliques les plus convoitées dans ce monde. Imaginez le entre de mauvaises mains.\nIl semblerait que l’une des raisons de la création du Sacré Coeur fut de mettre en sécurité ce coeur en cette période."),
+            if (_isDone2) const SizedBox(height: 20),
+            if (_isDone2) const NextButton('/fete'),
             const SizedBox(height: 60),
           ],
         ),
@@ -86,6 +102,18 @@ class _MontagnePageState extends State<MontagnePage> {
   void _onSuccess() {
     setState(() {
       _isDone = true;
+    });
+  }
+
+  bool _condition2(String reponse) {
+    return reponse.toLowerCase().contains("moulin") &&
+        (reponse.toLowerCase().contains('galette') ||
+            (reponse.toLowerCase().contains('blute') && reponse.toLowerCase().contains('fin')));
+  }
+
+  void _onSuccess2() {
+    setState(() {
+      _isDone2 = true;
     });
   }
 }
