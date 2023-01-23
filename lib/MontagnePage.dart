@@ -80,8 +80,7 @@ class _MontagnePageState extends State<MontagnePage> {
   }
 
   bool _checkAnswer(String answer) {
-    // TODO JUJU, remplacer par la bonne condition
-    return answer == "yolo";
+    return answer.toLowerCase().contains('van') && answer.toLowerCase().contains('gogh');
   }
 
   void _onSuccess() {
