@@ -51,7 +51,6 @@ class _JujuPageState extends State<JujuPage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     if (height / width < 1.3) {
-      if (height < 600) return _MoveToPortrait();
       return Container(
         decoration: const BoxDecoration(
           color: Colors.blueGrey,
@@ -148,21 +147,5 @@ class _JujuPageState extends State<JujuPage> {
         ],
       );
     }
-  }
-}
-
-class _MoveToPortrait extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-        child: Text(
-      "Désolé, ça ne fonctionne qu'en mode portrait",
-      style: TextStyle(
-        fontSize: 20,
-        fontFamily: "Century Gothic",
-        color: Colors.black,
-        fontWeight: FontWeight.w900,
-      ),
-    ));
   }
 }
