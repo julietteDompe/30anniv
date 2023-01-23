@@ -169,6 +169,45 @@ class _ChapitresPageState extends State<ChapitresPage> {
                       ),
                     ),
                   ),
+                if (userLevel >= 4)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                    child: Container(
+                      color: Colors.black,
+                      padding: const EdgeInsets.all(1),
+                      child: Material(
+                        color: Colors.white,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("/fete");
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: const [
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.all(30),
+                                  child: Text('IV - LA FETE',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontFamily: 'Bodoni',
+                                      )),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(30),
+                                child: Text('>',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontFamily: 'Bodoni',
+                                    )),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
               ],
             ),
           ),
