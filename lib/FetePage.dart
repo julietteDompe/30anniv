@@ -64,7 +64,7 @@ class _FetePageState extends State<FetePage> {
               condition: _condition2,
               controller: controller2,
               onSuccess: _onSuccess2,
-              levelToUnlock: 4,
+              levelToUnlock: 5,
             ),
             if (_isDone2) const SizedBox(height: 20),
             if (_isDone2) const NextButton('/finito'),

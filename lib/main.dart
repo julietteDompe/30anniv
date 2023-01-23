@@ -4,6 +4,7 @@ import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
 import 'package:juju30ans/FetePage.dart';
 import 'package:juju30ans/MontagnePage.dart';
+import 'package:juju30ans/SistaPage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/colors.dart';
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         "/chapitres": (context) => ChapitresPage(),
         "/montagne": (context) => MontagnePage(),
         "/fete": (context) => FetePage(),
+        "/sista": (context) => SistaPage(),
       },
     );
   }
