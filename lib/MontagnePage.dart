@@ -166,13 +166,18 @@ class ImageEnigme extends StatelessWidget {
   final String asset;
   final double? height;
 
-  ImageEnigme(this.asset, [this.height]);
+  const ImageEnigme(this.asset, [this.height]);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Center(child: Image.asset(asset, height: height)),
+      child: Center(
+        child: InteractiveViewer(
+          maxScale: 5,
+          child: Image.asset(asset, height: height),
+        ),
+      ),
     );
   }
 }

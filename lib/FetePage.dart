@@ -27,12 +27,12 @@ class _FetePageState extends State<FetePage> {
             const ParagrapheEnigme(
                 'Le Moulin de la Galette ne désigne pas un moulin à proprement parlé mais le bal public ouvert par la famille Debray, meuniers historiques de la Butte. Le moulin changera souvent d’emplacement dù à l’urbanisation de Paris (au gré des mesures d’alignement de la rue). '),
             const SizedBox(height: 20),
-            ImageEnigme("images/fete1.png"),
+            const ImageEnigme("images/fete1.png"),
             const SizedBox(height: 20),
             const ParagrapheEnigme(
                 'Je me rends en ce dimanche des temps maussades au bal. Je sors mon plus bel accoutrement prêt pour mes plus beaux pas de danses. Comme à son habitude même en temps de guerre et malgré son déménagement l’année passée, la salle de réception est comble.Mais où chercher ? Il y a forcement plus d’indices sur la peinture...'),
             const SizedBox(height: 20),
-            ImageEnigme("images/montagne5.png"),
+            const ImageEnigme("images/montagne5.png"),
             const SizedBox(height: 20),
             const QuestionEnigme(
               question: 'Dans quelle partie du moulin je dois chercher ?',
