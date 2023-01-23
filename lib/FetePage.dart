@@ -86,7 +86,7 @@ class _FetePageState extends State<FetePage> {
   }
 
   bool _condition2(String reponse) {
-    return (reponse.toLowerCase().contains('l\'eglise saint-pierre') || reponse.toLowerCase().contains('l\'église saint-pierre')) ;
+    return (reponse.toLowerCase().contains('eglise saint pierre') || reponse.toLowerCase().contains('église saint pierre')) ;
   }
 
   void _onSuccess2() {
