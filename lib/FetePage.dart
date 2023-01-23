@@ -32,7 +32,7 @@ class _FetePageState extends State<FetePage> {
             const ParagrapheEnigme(
                 'Je me rends en ce dimanche des temps maussades au bal. Je sors mon plus bel accoutrement prêt pour mes plus beaux pas de danses. Comme à son habitude même en temps de guerre et malgré son déménagement l’année passée, la salle de réception est comble.Mais où chercher ? Il y a forcement plus d’indices sur la peinture...'),
             const SizedBox(height: 20),
-            const ImageEnigme("images/montagne5.png"),
+            const ImageEnigme("images/montagne5.jpg"),
             const SizedBox(height: 20),
             const QuestionEnigme(
               question: 'Dans quelle partie du moulin je dois chercher ?',
@@ -76,7 +76,7 @@ class _FetePageState extends State<FetePage> {
   }
 
   bool _condition(String reponse) {
-    return reponse == 'yolo';
+    return (reponse.toLowerCase().contains('la terrasse') || reponse.toLowerCase().contains('le balcon')  || reponse.toLowerCase().contains('le toit'));
   }
 
   void _onSuccess() {
@@ -86,7 +86,7 @@ class _FetePageState extends State<FetePage> {
   }
 
   bool _condition2(String reponse) {
-    return reponse == 'yolo';
+    return (reponse.toLowerCase().contains('l\'eglise saint-pierre') || reponse.toLowerCase().contains('l\'église saint-pierre')) ;
   }
 
   void _onSuccess2() {
