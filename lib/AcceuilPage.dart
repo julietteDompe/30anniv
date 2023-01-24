@@ -113,7 +113,7 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
 """,
                     style: TextStyle(
                       fontFamily: 'Savoye',
-                      fontSize: 22,
+                      fontSize: 24,
                       letterSpacing: 6,
                     ),
                   ),
@@ -138,7 +138,7 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
             alignment: Alignment.bottomCenter,
             child: Container(
               color: const Color(0xFFFFF5F7F2),
-              height: 80,
+              height: 54,
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -150,10 +150,10 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Image.asset("images/chapitres.png"),
-                          const SizedBox(height: 4),
+                          Image.asset("images/chapitres.png", height: 26, width: 26),
+                          const SizedBox(height: 2),
                           const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 4),
                         ],
                       ),
                     ),
@@ -161,14 +161,14 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: Container(height: 22, width: 1, color: const Color(0xFF9C825E)),
+                        padding: const EdgeInsets.only(bottom: 3.0),
+                        child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                       )),
                   Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                         child: Container(
-                            height: 50,
+                            height: 2,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
                                 color: JujuColors.gradientBottom,
@@ -176,8 +176,7 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                                   5.0,
                                   5.0,
                                 ),
-                                blurRadius: 10.0,
-                                spreadRadius: 2.0,
+                                spreadRadius: 1.0,
                               ),
                             ]),
                             child: Transform.translate(
@@ -192,17 +191,17 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: Container(height: 22, width: 1, color: const Color(0xFF9C825E)),
+                        padding: const EdgeInsets.only(bottom: 4.0),
+                        child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                       )),
                   Expanded(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Image.asset("images/sac.png"),
-                          const SizedBox(height: 4),
+                          Image.asset("images/sac.png", height: 26, width: 26),
+                          const SizedBox(height: 2),
                           const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 4),
                         ],
                       )),
                 ],
@@ -218,8 +217,8 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                   _launchNextEnigme(context);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 35),
-                  child: Image.asset("images/play_button.png"),
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Image.asset('images/start.png', height: 56, width: 56),
                 ),
               ),
             ),
