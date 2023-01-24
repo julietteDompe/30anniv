@@ -19,25 +19,34 @@ class _RoiPageState extends State<RoiPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const EnigmeTitle('VI - CARTE POSTALE'),
-            AudioButton('Chap6.m4a'),
+            const EnigmeTitle('VIII - LE ROI'),
+            AudioButton('Chap8.m4a'),
             const SizedBox(height: 20),
             const ParagrapheEnigme(
-                'Effectivement, je découvre dans le sacristie, sur une des pierres de la colonne centrale, le symbole du même blason. Elle ne semble pas scellée, je la retire et y trouve une carte postale.'),
+                'Toute cette histoire fait penser que l’ordre de Malte a un rôle à jouer dans la préservation des biens religieux.'
+                    ' Au cours de mon travail, il m’est souvent arrivé de croiser cet ordre. Chaque relique est gardée par'
+                    ' une personne de confiance ayant un poste important dans la société, beaucoup font parti d’un ordre.'
+                    ' Notamment pour avoir accès à des lieux sécurisés pour pouvoir trouver un endroit loin des '
+                    'regards pour disposer ce patrimoine.\nHenri 2 serait le dernier roi chevalier. Or l’ordre de Malte, '
+                    'était également un ordre de chevalerie...\n\nCes découvertes semblent nous suggérer qu’Henri 2 aurait été un des protecteurs du ‘Sacré’ (la fameuse relique du coeur de Jésus).'),
             const SizedBox(height: 20),
-            const ImageEnigme("images/postale1.png"),
+            const ImageEnigme("images/roi1.png"),
             const SizedBox(height: 20),
-            const ParagrapheEnigme('Au verso, ceci '),
-            const SizedBox(height: 20),
-            const ImageEnigme("images/postale2.png"),
-            const SizedBox(height: 20),
-            const ParagrapheEnigme('Ok! un alphabet pour déchiffrer un futur message sur la gauche et un message à décoder à droite. '),
+            const Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Text(
+                'Les Trois Grâces. Element du monument funéraire du coeur du roi Henri 2.\n\n',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontFamily: 'Savoye', fontSize: 18, letterSpacing: 2),
+              ),
+            ),
+            const ParagrapheEnigme('On peut voir au pied de la sculpture une gravure indiquant : \"Le cœur du Sacré est rouge comme le sang. Chevaliers de l\’ordre veuillent sur lui. Le secret perdurera tant que le vent activera les moulins.\"'),
             const SizedBox(height: 20),
             const QuestionEnigme(
-              question: 'Quel est le message de droite ?',
-              indice1: "Il y a surement un objet qui peut m\'aider à déchiffrer. La partie gauche servira plus tard",
-              indice2: 'La roue tourne',
-              infos: 'Tu veux pas la réponse non plus ...',
+              question: 'Où Henri 2 nous mène-t-il ?',
+              indice1: 'Cette gravure cache un message',
+              indice2: 'J\’ai probablement qqch pour lire dans mon sac',
+              infos: 'Superposer le Cache ',
             ),
             if (!_isDone) AnswerBlock(
               hint: 'MSG',
@@ -56,7 +65,7 @@ class _RoiPageState extends State<RoiPage> {
   }
 
   bool _condition(String reponse) {
-    return reponse.toLowerCase().contains('Louvre salle 527 oa 7848');
+    return reponse.toLowerCase().contains('yolo');
   }
 
   void _onSuccess() {
