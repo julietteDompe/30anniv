@@ -56,7 +56,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
   }
 
   bool _condition(String reponse) {
-    return reponse.toLowerCase().contains('Louvre salle 527 oa 7848');
+    return reponse.toLowerCase().contains('louvre salle 527 oa 7848');
   }
 
   void _onSuccess() {
