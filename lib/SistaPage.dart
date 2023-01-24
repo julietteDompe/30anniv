@@ -37,9 +37,9 @@ class _SistaPageState extends State<SistaPage> {
             const SizedBox(height: 20),
             const QuestionEnigme(
               question: 'Ou dois-je regarder ?',
-              indice1: 'Sur le plan, les piliers semblent numérotés',
+              indice1: 'Sur le plan, il semble y avoir des numéros',
               indice2: 'N\'as t\'on pas déjà un code de ce type ?',
-              infos: 'Rendez vous Vendredi 27 janvier pour mon birthday les lapinous',
+              infos: 'Aller vas-voir dans ton sac',
             ),
             if (!_isDone) AnswerBlock(
               hint: 'LE LIEU',
