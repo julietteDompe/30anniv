@@ -166,21 +166,21 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                       )),
                   Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                        padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
                         child: Container(
-                            height: 2,
+                            height: 50,
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
                                 color: JujuColors.gradientBottom,
                                 offset: const Offset(
-                                  5.0,
-                                  5.0,
+                                  3.0,
+                                  42.0,
                                 ),
                                 spreadRadius: 1.0,
                               ),
                             ]),
                             child: Transform.translate(
-                              offset: const Offset(0, 5),
+                              offset: const Offset(5, 0),
                               child: const Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text('START',
@@ -191,7 +191,7 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: const EdgeInsets.only(bottom: 4.0),
+                        padding: const EdgeInsets.only(bottom: 3.0),
                         child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                       )),
                   Expanded(
