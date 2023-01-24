@@ -49,7 +49,7 @@ class _SistaPageState extends State<SistaPage> {
               levelToUnlock: 6,
             ),
             if (_isDone) const SizedBox(height: 20),
-            if (_isDone) const NextButton('/finito'),
+            if (_isDone) const NextButton('/carte_postale'),
             const SizedBox(height: 60),
           ],
         ),

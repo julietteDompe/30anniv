@@ -245,6 +245,15 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
         case 3:
           Navigator.of(context).pushNamed("/montagne");
           break;
+        case 4:
+          Navigator.of(context).pushNamed("/fete");
+          break;
+        case 5:
+          Navigator.of(context).pushNamed("/sista");
+          break;
+        case 6:
+          Navigator.of(context).pushNamed("/carte_postale");
+          break;
         default:
           Navigator.of(context).pushNamed("/finito");
           break;

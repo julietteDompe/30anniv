@@ -67,6 +67,10 @@ class _ContentState extends State<_Content> {
                 const ChapitreItem(label: 'III - LA MONTAGNE', page: '/montagne'),
               if (userLevel >= 4)
                 const ChapitreItem(label: 'IV - LA FÊTE', page: '/fete'),
+              if (userLevel >= 5)
+                const ChapitreItem(label: 'V - SISTA', page: '/sista'),
+              if (userLevel >= 6)
+                const ChapitreItem(label: 'VI - CARTE POSTALE', page: '/carte_postale'),
               const SizedBox(height: 60),
             ],
           ),
@@ -177,6 +181,15 @@ class _ContentState extends State<_Content> {
           break;
         case 3:
           Navigator.of(context).pushNamed("/montagne");
+          break;
+       case 4:
+          Navigator.of(context).pushNamed("/fete");
+          break;
+       case 5:
+          Navigator.of(context).pushNamed("/sista");
+          break;
+       case 6:
+          Navigator.of(context).pushNamed("/carte_postale");
           break;
         default:
           Navigator.of(context).pushNamed("/finito");
