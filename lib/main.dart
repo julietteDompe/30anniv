@@ -3,6 +3,7 @@ import 'package:juju30ans/AcceuilPage.dart';
 import 'package:juju30ans/CartePostalePage.dart';
 import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
+import 'package:juju30ans/EpeePage.dart';
 import 'package:juju30ans/FetePage.dart';
 import 'package:juju30ans/MontagnePage.dart';
 import 'package:juju30ans/SistaPage.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         "/fete": (context) => FetePage(),
         "/sista": (context) => SistaPage(),
         "/carte_postale": (context) => CartPostalePage(),
+        "/epee": (context) => EpeePage(),
       },
     );
   }
