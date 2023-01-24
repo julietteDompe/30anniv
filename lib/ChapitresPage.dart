@@ -75,67 +75,67 @@ class _ContentState extends State<_Content> {
           alignment: Alignment.bottomCenter,
           child: Container(
             color: const Color(0xFFFFF5F7F2),
-            height: 80,
+            height: 54,
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
-                    child: Container(
-                  decoration: BoxDecoration(boxShadow: [
-                    BoxShadow(
-                      color: JujuColors.gradientBottom,
-                      offset: const Offset(
-                        5.0,
-                        5.0,
-                      ),
-                      blurRadius: 10.0,
-                      spreadRadius: 2.0,
-                    ),
-                  ]),
+                    child:  Container(
+                      height: 50,
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                          color: JujuColors.gradientBottom,
+                          offset: const Offset(
+                            0,
+                            45.0,
+                          ),
+                          spreadRadius: 1.0,
+                        ),
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset("images/chapitres.png"),
+                      Image.asset("images/chapitres.png", height: 26, width: 26),
+                      const SizedBox(height: 2),
+                      const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12,fontWeight: FontWeight.w700))),
                       const SizedBox(height: 4),
-                      const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                      const SizedBox(height: 8),
                     ],
                   ),
                 )),
                 Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Container(height: 22, width: 1, color: const Color(0xFF9C825E)),
+                      padding: const EdgeInsets.only(bottom: 3.0),
+                      child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                     )),
                 Expanded(
                     child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 5),
                   child: Container(
                       height: 50,
                       child: Transform.translate(
-                        offset: const Offset(0, 5),
+                        offset: const Offset(5, 5),
                         child: const Align(
                           alignment: Alignment.bottomCenter,
                           child: Text('START',
-                              style: TextStyle(fontFamily: 'Popins', fontSize: 12, fontWeight: FontWeight.w700)),
+                              style: TextStyle(fontFamily: 'Popins', fontSize: 12)),
                         ),
                       )),
                 )),
                 Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Container(height: 22, width: 1, color: const Color(0xFF9C825E)),
+                      padding: const EdgeInsets.only(bottom: 3.0),
+                      child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                     )),
                 Expanded(
                     child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Image.asset("images/sac.png"),
-                    const SizedBox(height: 4),
+                    Image.asset("images/sac.png",height: 26, width: 26),
+                    const SizedBox(height: 2),
                     const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 4),
                   ],
                 )),
               ],
@@ -151,8 +151,8 @@ class _ContentState extends State<_Content> {
                 _launchNextEnigme(context);
               },
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 35),
-                child: Image.asset("images/play_button.png"),
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Image.asset("images/start.png", height: 56, width: 56),
               ),
             ),
           ),
