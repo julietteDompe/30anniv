@@ -7,6 +7,7 @@ import 'package:juju30ans/EpeePage.dart';
 import 'package:juju30ans/FetePage.dart';
 import 'package:juju30ans/MontagnePage.dart';
 import 'package:juju30ans/RoiPage.dart';
+import 'package:juju30ans/SacPage.dart';
 import 'package:juju30ans/SistaPage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         "/carte_postale": (context) => CartPostalePage(),
         "/epee": (context) => EpeePage(),
         "/roi": (context) => RoiPage(),
+        "/sac": (context) => SacPage(),
       },
     );
   }

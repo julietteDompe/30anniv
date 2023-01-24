@@ -3,10 +3,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:juju30ans/CodeRepository.dart';
 import 'package:juju30ans/JujuPage.dart';
+import 'package:juju30ans/SacDetailPage.dart';
 import 'package:juju30ans/button.dart';
 import 'package:juju30ans/colors.dart';
 
-class ChapitresPage extends StatelessWidget {
+class SacPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
@@ -51,7 +52,7 @@ class _ContentState extends State<_Content> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 40),
                   child: Text(
-                    'LES CHAPITRES',
+                    'MON SAC',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
@@ -60,18 +61,10 @@ class _ContentState extends State<_Content> {
                   ),
                 ),
               ),
-              const ChapitreItem(label: 'I - LA DECOUVERTE', page: '/decouverte_yolo_1'),
-              if (userLevel >= 2)
-                const ChapitreItem(label: 'II - LES TRANSPORTS', page: '/transports'),
-              if (userLevel >= 3)
-                const ChapitreItem(label: 'III - LA MONTAGNE', page: '/montagne'),
+              if (userLevel >= 1)
+                const SacItem(asset: "images/sac_medaillon.png", label: 'MÉDAILLON'),
               if (userLevel >= 4)
-                const ChapitreItem(label: 'IV - LA FÊTE', page: '/fete'),
-              if (userLevel >= 5)
-                const ChapitreItem(label: 'V - SISTA', page: '/sista'),
-              if (userLevel >= 6)
-                const ChapitreItem(label: 'VI - CARTE POSTALE', page: '/carte_postale'),
-              const SizedBox(height: 60),
+                const SacItem(asset: "images/sac_roue.png", label: 'ROUE'),
             ],
           ),
         ),
@@ -84,28 +77,23 @@ class _ContentState extends State<_Content> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
-                    child:  Container(
-                      height: 50,
-                      decoration: BoxDecoration(boxShadow: [
-                        BoxShadow(
-                          color: JujuColors.gradientBottom,
-                          offset: const Offset(
-                            0,
-                            45.0,
-                          ),
-                          spreadRadius: 1.0,
-                        ),
-                      ]),
+                    child:  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/chapitres');
+                      },
+                      child: Container(
+                        height: 50,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset("images/chapitres.png", height: 26, width: 26),
-                      const SizedBox(height: 2),
-                      const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12,fontWeight: FontWeight.w700))),
-                      const SizedBox(height: 4),
-                    ],
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Image.asset("images/chapitres.png", height: 26, width: 26),
+                        const SizedBox(height: 2),
+                        const Center(child: Text('CHAPITRES', style: TextStyle(fontFamily: 'Popins', fontSize: 12,fontWeight: FontWeight.w700))),
+                        const SizedBox(height: 4),
+                      ],
                   ),
-                )),
+                ),
+                    )),
                 Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
@@ -133,10 +121,17 @@ class _ContentState extends State<_Content> {
                       child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                     )),
                 Expanded(
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/sac');
-                      },
+                    child: Container(
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                          color: JujuColors.gradientBottom,
+                          offset: const Offset(
+                            0,
+                            45.0,
+                          ),
+                          spreadRadius: 1.0,
+                        ),
+                      ]),
                       child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -204,13 +199,13 @@ class _ContentState extends State<_Content> {
   }
 }
 
-class ChapitreItem extends StatelessWidget {
+class SacItem extends StatelessWidget {
+  final String asset;
   final String label;
-  final String page;
 
-  const ChapitreItem({
+  const SacItem({
+    required this.asset,
     required this.label,
-    required this.page,
   });
 
   @override
@@ -224,11 +219,13 @@ class ChapitreItem extends StatelessWidget {
           color: Colors.white,
           child: InkWell(
             onTap: () {
-              Navigator.of(context).pushNamed(page);
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => SacDetailPage(asset)));
             },
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
+                const SizedBox(width: 30),
+                Image.asset(asset, width: 60, height: 60),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(30),

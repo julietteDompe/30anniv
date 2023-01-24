@@ -195,14 +195,19 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
                         child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
                       )),
                   Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image.asset("images/sac.png", height: 26, width: 26),
-                          const SizedBox(height: 2),
-                          const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
-                          const SizedBox(height: 4),
-                        ],
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/sac');
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Image.asset("images/sac.png", height: 26, width: 26),
+                            const SizedBox(height: 2),
+                            const Center(child: Text('SAC', style: TextStyle(fontFamily: 'Popins', fontSize: 12))),
+                            const SizedBox(height: 4),
+                          ],
+                        ),
                       )),
                 ],
               ),
