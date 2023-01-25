@@ -48,7 +48,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
               levelToUnlock: 7,
             ),
             if (_isDone) const SizedBox(height: 20),
-            if (_isDone) const NextButton('/finito'),
+            if (_isDone) const NextButton('/epee'),
             const SizedBox(height: 60),
           ],
         ),

@@ -71,6 +71,10 @@ class _ContentState extends State<_Content> {
                 const ChapitreItem(label: 'V - SISTA', page: '/sista'),
               if (userLevel >= 6)
                 const ChapitreItem(label: 'VI - CARTE POSTALE', page: '/carte_postale'),
+              if (userLevel >= 7)
+                const ChapitreItem(label: 'VII - L\'ÉPÉE', page: '/epee'),
+              if (userLevel >= 8)
+                const ChapitreItem(label: 'VIII - LE ROI', page: '/roi'),
               const SizedBox(height: 60),
             ],
           ),

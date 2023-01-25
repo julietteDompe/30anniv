@@ -59,7 +59,7 @@ class _EpeePageState extends State<EpeePage> {
               levelToUnlock: 8,
             ),
             if (_isDone) const SizedBox(height: 20),
-            if (_isDone) const NextButton('/finito'),
+            if (_isDone) const NextButton('/roi'),
             const SizedBox(height: 60),
           ],
         ),
@@ -68,7 +68,7 @@ class _EpeePageState extends State<EpeePage> {
   }
 
   bool _condition(String reponse) {
-    return reponse.toLowerCase().contains('yolo');
+    return reponse.toLowerCase().contains('collection les 3 graces');
   }
 
   void _onSuccess() {

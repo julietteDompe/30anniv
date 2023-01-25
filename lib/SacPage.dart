@@ -65,6 +65,10 @@ class _ContentState extends State<_Content> {
                 const SacItem(asset: "images/sac_medaillon.png", label: 'MÉDAILLON'),
               if (userLevel >= 4)
                 const SacItem(asset: "images/sac_roue.png", label: 'ROUE'),
+              if (userLevel >= 6)
+                const SacItem(asset: "images/alphabet.jpeg", label: 'ALPHABET'),
+              if (userLevel >= 6)
+                const SacItem(asset: "images/calque.jpeg", label: 'CALQUE'),
             ],
           ),
         ),
