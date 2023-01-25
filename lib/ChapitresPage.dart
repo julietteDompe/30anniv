@@ -197,8 +197,14 @@ class _ContentState extends State<_Content> {
        case 5:
           Navigator.of(context).pushNamed("/sista");
           break;
-       case 6:
+        case 6:
           Navigator.of(context).pushNamed("/carte_postale");
+          break;
+       case 7:
+          Navigator.of(context).pushNamed("/epee");
+          break;
+        case 8:
+          Navigator.of(context).pushNamed("/roi");
           break;
         default:
           Navigator.of(context).pushNamed("/finito");

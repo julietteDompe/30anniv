@@ -41,8 +41,15 @@ class _RoiPageState extends State<RoiPage> {
                 style: const TextStyle(fontFamily: 'Savoye', fontSize: 18, letterSpacing: 2),
               ),
             ),
-            const ParagrapheEnigme('On peut voir au pied de la sculpture une gravure indiquant : \"Le cœur du Sacré est rouge comme le sang. Chevaliers de l\’ordre veuillent sur lui. Le secret perdurera tant que le vent activera les moulins.\"'),
-            const SizedBox(height: 20),
+            const ParagrapheEnigme('On peut voir au pied de la sculpture une gravure indiquant : \n'),
+          const Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Text(
+          '\"Le cœur du Sacré est rouge comme le sang. Chevaliers de l\’ordre veuillent sur lui. Le secret perdurera tant que le vent activera les moulins.\"',
+          style: const TextStyle(fontFamily: 'Savoye', fontSize: 21, letterSpacing: 2),
+        ),
+          ),
+        const SizedBox(height: 20),
             const QuestionEnigme(
               question: 'Où Henri 2 nous mène-t-il ?',
               indice1: 'Cette gravure cache un message',
@@ -66,7 +73,7 @@ class _RoiPageState extends State<RoiPage> {
   }
 
   bool _condition(String reponse) {
-    return reponse.toLowerCase().contains('yolo');
+    return reponse.toLowerCase().contains('le moulin rouge');
   }
 
   void _onSuccess() {
