@@ -44,7 +44,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
               condition: _condition,
               controller: controller,
               onSuccess: _onSuccess,
-              levelToUnlock: 6,
+              levelToUnlock: 7,
             ),
             if (_isDone) const SizedBox(height: 20),
             if (_isDone) const NextButton('/finito'),
