@@ -21,6 +21,7 @@ class _MontagnePageState extends State<MontagnePage> {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
+      withBottomBar: true,
       level: 3,
       child: SingleChildScrollView(
         child: Column(

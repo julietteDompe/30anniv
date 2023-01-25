@@ -27,6 +27,7 @@ class _TransportsPageState extends State<TransportsPage> {
   Widget build(BuildContext context) {
     return JujuPage(
       level: 2,
+      withBottomBar: true,
       child: Stack(
         children: [
           SingleChildScrollView(

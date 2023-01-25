@@ -9,10 +9,12 @@ import 'CodeRepository.dart';
 class JujuPage extends StatefulWidget {
   final Widget child;
   final int level;
+  final bool withBottomBar;
 
   JujuPage({
     required this.child,
     required this.level,
+    this.withBottomBar = false,
   });
 
   @override
@@ -87,7 +89,14 @@ class _JujuPageState extends State<JujuPage> {
 
   Widget _buildPage(BuildContext context) {
     if (userLevel >= widget.level) {
-      return widget.child;
+      return Column(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(child: widget.child),
+          if (widget.withBottomBar) NavBarEnigme(),
+        ],
+      );
     } else {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -148,4 +157,75 @@ class _JujuPageState extends State<JujuPage> {
       );
     }
   }
+}
+
+class NavBarEnigme extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      child: Row(
+        children: const [
+          NavItem(label: 'CHAPITRES', asset: 'images/chapitres.png', page: '/chapitres'),
+          _Separator(),
+          NavItem(label: 'ACCEUIL', asset: 'images/play_button.png', page: '/acceuil'),
+          _Separator(),
+          NavItem(label: 'SAC', asset: 'images/sac.png', page: '/sac'),
+        ],
+      ),
+    );
+  }
+}
+
+class NavItem extends StatelessWidget {
+  final String label;
+  final String asset;
+  final String page;
+
+  const NavItem({
+    required this.label,
+    required this.asset,
+    required this.page,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, page);
+          },
+          child: Center(
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                Image.asset(asset, height: 26, width: 26),
+                const SizedBox(height: 2),
+                Center(child: Text(label, style: const TextStyle(fontFamily: 'Popins', fontSize: 12))),
+                const SizedBox(height: 10),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Separator extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 3.0),
+        child: Container(height: 18, width: 1, color: const Color(0xFF9C825E)),
+      ),
+    );
+  }
+
+  const _Separator();
 }

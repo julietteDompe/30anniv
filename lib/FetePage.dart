@@ -17,6 +17,7 @@ class _FetePageState extends State<FetePage> {
   Widget build(BuildContext context) {
     return JujuPage(
       level: 4,
+      withBottomBar: true,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

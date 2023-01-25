@@ -14,7 +14,8 @@ class _RoiPageState extends State<RoiPage> {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
-      level: 6,
+      level: 8,
+      withBottomBar: true,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -53,7 +54,7 @@ class _RoiPageState extends State<RoiPage> {
               condition: _condition,
               controller: controller,
               onSuccess: _onSuccess,
-              levelToUnlock: 6,
+              levelToUnlock: 9,
             ),
             if (_isDone) const SizedBox(height: 20),
             if (_isDone) const NextButton('/finito'),

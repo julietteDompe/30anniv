@@ -14,7 +14,8 @@ class _EpeePageState extends State<EpeePage> {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
-      level: 6,
+      withBottomBar: true,
+      level: 7,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -55,7 +56,7 @@ class _EpeePageState extends State<EpeePage> {
               condition: _condition,
               controller: controller,
               onSuccess: _onSuccess,
-              levelToUnlock: 6,
+              levelToUnlock: 8,
             ),
             if (_isDone) const SizedBox(height: 20),
             if (_isDone) const NextButton('/finito'),

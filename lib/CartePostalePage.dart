@@ -15,6 +15,7 @@ class _CartPostalePageState extends State<CartPostalePage> {
   Widget build(BuildContext context) {
     return JujuPage(
       level: 6,
+      withBottomBar: true,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

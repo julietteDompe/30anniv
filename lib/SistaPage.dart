@@ -15,6 +15,7 @@ class _SistaPageState extends State<SistaPage> {
   Widget build(BuildContext context) {
     return JujuPage(
       level: 5,
+      withBottomBar: true,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

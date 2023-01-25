@@ -25,6 +25,7 @@ class _DecouvertePageState extends State<DecouvertePage> {
   @override
   Widget build(BuildContext context) {
     return JujuPage(
+      withBottomBar: true,
       level: 1,
       child: Stack(
         children: [
