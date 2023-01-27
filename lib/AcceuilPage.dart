@@ -241,6 +241,9 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
         userLevel = (doc.data()["levelUnlocked"] as int);
       }
       switch (userLevel) {
+        case 0:
+          Navigator.of(context).pushNamed('/soiree');
+          break;
         case 1:
           Navigator.of(context).pushNamed('/decouverte_yolo_1');
           break;
@@ -264,6 +267,15 @@ Ni une ni deux, je l’ouvre et découvre que c’est le journal du grand-père 
           break;
         case 8:
           Navigator.of(context).pushNamed("/roi");
+          break;
+        case 9:
+          Navigator.of(context).pushNamed("/cendres");
+          break;
+        case 10:
+          Navigator.of(context).pushNamed("/derniere");
+          break;
+        case 11:
+          Navigator.of(context).pushNamed("/fin");
           break;
         default:
           Navigator.of(context).pushNamed("/finito");

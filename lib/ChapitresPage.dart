@@ -60,6 +60,8 @@ class _ContentState extends State<_Content> {
                   ),
                 ),
               ),
+              const ChapitreItem(label: 'LA SOIRÉE', page: '/soiree'),
+              if (userLevel >= 1)
               const ChapitreItem(label: 'I - LA DECOUVERTE', page: '/decouverte_yolo_1'),
               if (userLevel >= 2)
                 const ChapitreItem(label: 'II - LES TRANSPORTS', page: '/transports'),
@@ -75,6 +77,12 @@ class _ContentState extends State<_Content> {
                 const ChapitreItem(label: 'VII - L\'ÉPÉE', page: '/epee'),
               if (userLevel >= 8)
                 const ChapitreItem(label: 'VIII - LE ROI', page: '/roi'),
+              if (userLevel >= 9)
+                const ChapitreItem(label: 'IX - LES CENDRES', page: '/cendres'),
+              if (userLevel >= 10)
+                const ChapitreItem(label: 'X - LA DERNIERE', page: '/derniere'),
+              if (userLevel >= 11)
+                const ChapitreItem(label: 'La fin', page: '/fin'),
               const SizedBox(height: 60),
             ],
           ),
@@ -182,6 +190,9 @@ class _ContentState extends State<_Content> {
         userLevel = (doc.data()["levelUnlocked"] as int);
       }
       switch (userLevel) {
+        case 0:
+          Navigator.of(context).pushNamed('/soiree');
+          break;
         case 1:
           Navigator.of(context).pushNamed('/decouverte_yolo_1');
           break;
@@ -205,6 +216,15 @@ class _ContentState extends State<_Content> {
           break;
         case 8:
           Navigator.of(context).pushNamed("/roi");
+          break;
+        case 9:
+          Navigator.of(context).pushNamed("/cendres");
+          break;
+        case 10:
+          Navigator.of(context).pushNamed("/derniere");
+          break;
+        case 11:
+          Navigator.of(context).pushNamed("/fin");
           break;
         default:
           Navigator.of(context).pushNamed("/finito");

@@ -142,6 +142,29 @@ class EnigmeTitle extends StatelessWidget {
     );
   }
 }
+class Titlee extends StatelessWidget {
+  final String label;
+
+  const Titlee(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topCenter,
+      child: Padding(
+        padding: const EdgeInsets.all(40),
+        child: Text(
+          label,
+          style: const TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.w700,
+            fontFamily: 'Bodoni',
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class AudioButton extends StatelessWidget {
   final player = AudioPlayer();
@@ -184,7 +207,24 @@ class ParagrapheEnigme extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Text(
         label,
-        style: const TextStyle(fontFamily: 'Savoye', fontSize: 22, letterSpacing: 6),
+        style: const TextStyle(fontFamily: 'Savoye', fontSize: 22, letterSpacing: 5),
+      ),
+    );
+  }
+}
+
+class Paragraphe extends StatelessWidget {
+  final String label;
+
+  const Paragraphe(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Text(
+        label,
+        style: const TextStyle(fontFamily: 'Savoye', fontSize: 20, letterSpacing: 3),
       ),
     );
   }
@@ -369,3 +409,26 @@ class NextButton extends StatelessWidget {
     );
   }
 }
+
+class GoButton extends StatelessWidget {
+  final String nextPage;
+
+  const GoButton(this.nextPage);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 30),
+      child: Align(
+        alignment: Alignment.topRight,
+        child: SizedBox(
+          width: 240,
+          child: JujuBouton("ALLER GO", () {
+            Navigator.of(context).pushNamed(nextPage);
+          }),
+        ),
+      ),
+    );
+  }
+}
+

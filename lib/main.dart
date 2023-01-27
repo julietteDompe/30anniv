@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:juju30ans/AcceuilPage.dart';
+import 'package:juju30ans/BarDansantPage.dart';
+import 'package:juju30ans/BarPage.dart';
 import 'package:juju30ans/CartePostalePage.dart';
 import 'package:juju30ans/ChapitresPage.dart';
+import 'package:juju30ans/DancePage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
 import 'package:juju30ans/EpeePage.dart';
 import 'package:juju30ans/FetePage.dart';
 import 'package:juju30ans/MontagnePage.dart';
+import 'package:juju30ans/QuartierPage.dart';
+import 'package:juju30ans/RestoPage.dart';
 import 'package:juju30ans/RoiPage.dart';
 import 'package:juju30ans/SacPage.dart';
 import 'package:juju30ans/SistaPage.dart';
+import 'package:juju30ans/SoireePage.dart';
 import 'package:juju30ans/TransportsPage.dart';
 import 'package:juju30ans/before22.dart';
 import 'package:juju30ans/colors.dart';
@@ -17,6 +23,7 @@ import 'package:juju30ans/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:juju30ans/topo.dart';
 
+import 'CreuxPage.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -65,6 +72,13 @@ class MyApp extends StatelessWidget {
         "/epee": (context) => EpeePage(),
         "/roi": (context) => RoiPage(),
         "/sac": (context) => SacPage(),
+        "/soiree": (context) => SoireePage(),
+        "/quartier": (context) => QuartierPage(),
+        "/dance": (context) => DancePage(),
+        "/bardansant": (context) => BarDansantPage(),
+        "/petitcreux": (context) => CreuxPage(),
+        "/resto": (context) => RestoPage(),
+        "/bar": (context) => BarPage(),
       },
     );
   }
