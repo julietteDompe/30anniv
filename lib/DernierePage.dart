@@ -74,7 +74,7 @@ class _DernierePageState extends State<DernierePage> {
                       "Désormais le phare illumine le ciel de Paris les soirs de spectacle."),
              if (_isDone) const SizedBox(height: 20),
             if (_isDone) const ImageEnigme("der1.jpg"), const SizedBox(height: 20),
-            if (_isDone) AudioButton('Chap6.m4a'),
+            if (_isDone) AudioButton('Chap10.m4a'),
             if (_isDone)
               const ParagrapheEnigme(
                   "En 1912, les Grands Magasins Dufayel emploient 15 000 personnes et revendique le "

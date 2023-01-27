@@ -20,7 +20,7 @@ class _FinPageState extends State<FinPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const EnigmeTitle('LA FIN'),
-            AudioButton('Chap6.m4a'),
+            AudioButton('Cha11.m4a'),
             const SizedBox(height: 20),
             const ImageEnigme("images/fin1.jpg"),
             const SizedBox(height: 20),
@@ -58,21 +58,27 @@ class _FinPageState extends State<FinPage> {
             const SizedBox(height: 20),
             const SizedBox(height: 20),
             const ImageEnigme("images/fin2.jpg"),
-            const ParagrapheEnigme('Je me rend au niveau du dôme ou ce symbole énorme. Je me faufile '
-                'pour rester bloqué dans les magasinsJ’entre dans la salle et la au tour dune table '
-                'ronde une cérémonie est organisée, des bougies, une table rond, des personnes '
+            const ParagrapheEnigme('Je me rend aux grands magasins de nuit. Je me faufile '
+                'et me cache histoire de rester et chercher tranquillement sans toute l\'agitation journaliere. '
+                'Je me rend au niveau du dome où j\'avais apercu de l\'exterieur'
+            'un symbole similaire à celui vu precedemment, celui de l\'ordre. '
+                'J’entre dans la salle située sous le dome et là au milieu de la salle se trouve'
+                'une cérémonie est organisée dans cette pénombre. Des bougies, une table ronde, des personnes que'
                 'je reconnais Legentil, Dufayel, Joseph Oller(fondateur du moulin rouge), '
-                'Eugène Pujalet (directeur du musée du Louvre), Francois Mitterrand nouvellement'
-                ' président de la République et …. Mon oncle ! Que fait-il ici ? Il vient vers moi et me'
-                ' dit : mon cher Louis, vient t’assoir, on t’attendait ! La se présente les « maitres » de '
-                'l’ordre de malte, qui protège les biens de l’histoire. Mon oncle en fait parti, tout comme mon'
-                ' père et ma mère, leur mort est lié à la protection du biens qu’ils avaient en charge.\n '
-                'Effectivement, le sacre coeur fut l’un des nombreux lieux de protection de la relique la plus'
-                ' précieuse de Jesus, le coeur humain dans lequel Dieu a divulgué sa divinité sur Terre. '
-                'Le Moulin Rouge également, le Louvre, l’église St Pierre de Montmartre, le moulin de la galette.'
-                ' Et maintenant, c’est à nous de veiller sur lui comme tu veuilles sur tes oeuvres depuis des'
-                ' années mais il est possible que tu y laisses la vie… Ceci n’était que la première étape d’une'
-                ' longue aventure à travers le monde, les époques et les oeuvres. Es-tu prêt fiston ?’'),
+                'Eugène Pujalet(directeur du musée du Louvre), Francois Mitterrand nouvellement'
+                ' président de la République et … mon oncle ! Que fait-il ici ? Il vient vers moi et me'
+                ' dit : "mon cher Louis, vient t’assoir, on t’attendait ! Nous sommes comme tu as du le comprendre les « maitres » de '
+                'l’ordre de malte, les représentants et protecteurs des biens les plus précieux de l’histoire. '
+                'Mon oncle en fait parti, tout comme mon père et ma mère de leur vivant. Leurs morts tragiques seraient liées à la protection'
+                ' du biens qu’ils avaient en charge.\n'
+                'Effectivement, les lieux que tu as vu pour te rendre ici, sont importants. Le sacre coeur fut l’un des nombreux lieux'
+                ' de protection de la relique la plus précieuse du monde catholique, le coeur humain dans lequel Dieu '
+                'a concentré sa divinité sur Terre. Le Moulin Rouge également, le Louvre, l’église St Pierre de Montmartre, le moulin de la galette'
+                'l\'on tous caché.\n'
+                'Nous sommes les maîtres en charge de ce trésor. Il est en lieu sur. '
+                'Et maintenant, tu as validé la premiere etape pour veuiller sur lui. C\'est une'
+                'tres lourde tache et tu pourrais y laisser la vie…  Ceci n’était que la première étape d’une longue aventure'
+                ' à travers le monde, les époques et les oeuvres. Es-tu prêt fiston ?’'),
             const SizedBox(height: 20),
             const EnigmeTitle('FIN \n(DE LA PREMIERE PARTIE)'),
           ],
