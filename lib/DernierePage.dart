@@ -21,7 +21,7 @@ class _DernierePageState extends State<DernierePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const EnigmeTitle('X - LA DERNIERE'),
-            const SizedBox(height: 20),
+            const SizedBox(height: 60),
             const ParagrapheEnigme(
                 'Evidemment, ni une ni deux, je sors mes allumettes et allume la bougie. '
                     'En la déparant sous la feuille, elle me dévoile les infos suivantes'),
@@ -63,6 +63,7 @@ class _DernierePageState extends State<DernierePage> {
               levelToUnlock: 11,
             ),
             if (_isDone) const SizedBox(height: 20),
+            if (_isDone) AudioButton('Chap10.m4a'),
             if (_isDone)
               const ParagrapheEnigme(
                   "Les grands magasins Dufayel.\nEn 1888, l’établissement "
@@ -74,7 +75,6 @@ class _DernierePageState extends State<DernierePage> {
                       "Désormais le phare illumine le ciel de Paris les soirs de spectacle."),
              if (_isDone) const SizedBox(height: 20),
             if (_isDone) const ImageEnigme("der1.jpg"), const SizedBox(height: 20),
-            if (_isDone) AudioButton('Chap10.m4a'),
             if (_isDone)
               const ParagrapheEnigme(
                   "En 1912, les Grands Magasins Dufayel emploient 15 000 personnes et revendique le "

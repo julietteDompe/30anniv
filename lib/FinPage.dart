@@ -20,7 +20,7 @@ class _FinPageState extends State<FinPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const EnigmeTitle('LA FIN'),
-            AudioButton('Cha11.m4a'),
+            AudioButton('Chap11.m4a'),
             const SizedBox(height: 20),
             const ImageEnigme("images/fin1.jpg"),
             const SizedBox(height: 20),
@@ -80,7 +80,7 @@ class _FinPageState extends State<FinPage> {
                 'tres lourde tache et tu pourrais y laisser la vie…  Ceci n’était que la première étape d’une longue aventure'
                 ' à travers le monde, les époques et les oeuvres. Es-tu prêt fiston ?’'),
             const SizedBox(height: 20),
-            const EnigmeTitle('FIN \n(DE LA PREMIERE PARTIE)'),
+            const Titlee('FIN \n(DE LA PREMIERE PARTIE)'),
           ],
         ),
       ),
