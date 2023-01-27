@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Juju Bday',
       theme: ThemeData(
         primarySwatch: MaterialColor(0xFFF9F3E7, <int, Color>{
           50: JujuColors.gradientBottom,
