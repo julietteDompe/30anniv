@@ -3,11 +3,14 @@ import 'package:juju30ans/AcceuilPage.dart';
 import 'package:juju30ans/BarDansantPage.dart';
 import 'package:juju30ans/BarPage.dart';
 import 'package:juju30ans/CartePostalePage.dart';
+import 'package:juju30ans/CendresPage.dart';
 import 'package:juju30ans/ChapitresPage.dart';
 import 'package:juju30ans/DancePage.dart';
 import 'package:juju30ans/DecouvertePage.dart';
+import 'package:juju30ans/DernierePage.dart';
 import 'package:juju30ans/EpeePage.dart';
 import 'package:juju30ans/FetePage.dart';
+import 'package:juju30ans/FinPage.dart';
 import 'package:juju30ans/MontagnePage.dart';
 import 'package:juju30ans/QuartierPage.dart';
 import 'package:juju30ans/RestoPage.dart';
@@ -79,6 +82,9 @@ class MyApp extends StatelessWidget {
         "/petitcreux": (context) => CreuxPage(),
         "/resto": (context) => RestoPage(),
         "/bar": (context) => BarPage(),
+        "/cendres": (context) => CendresPage(),
+        "/derniere": (context) => DernierePage(),
+        "/fin": (context) => FinPage(),
       },
     );
   }

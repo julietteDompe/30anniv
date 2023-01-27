@@ -64,7 +64,7 @@ class _RoiPageState extends State<RoiPage> {
               levelToUnlock: 9,
             ),
             if (_isDone) const SizedBox(height: 20),
-            if (_isDone) const NextButton('/finito'),
+            if (_isDone) const NextButton('/cendres'),
             const SizedBox(height: 60),
           ],
         ),

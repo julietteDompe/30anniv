@@ -34,14 +34,14 @@ class _BarPageState extends State<BarPage> {
                     '\nseul compte le premier,'
                     '\npour permettre de nous retrouver,'
                     '\nCe lieu est un bar convoité,'
-                    '\noù nous pourrons picolé,'
+                    '\noù nous pourrons picoler,'
                     '\nanciennement les grands magasins il est accolé'
                     '\nEn voyage long courrier'
                     '\nil est souvent préféré,'
                     '\naux prix enflammés,'
-                    '\nL’adresse a été restauré,'
+                    '\nL’adresse a été restaurée,'
                     '\nJ’espère qu’il n’a pas changé, '
-                    '\Nen tout cas j’en entend encore parler'),
+                    '\nen tout cas j’en entends encore parler'),
             const SizedBox(height: 60),
             if (!_isDone) const QuestionEnigme(
               question: 'Quel est-il ?',

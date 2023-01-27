@@ -29,7 +29,7 @@ class _RestoPageState extends State<RestoPage> {
                     'si tu veux y manger.'),
             const QuestionEnigme(
               question: '\nQuel resto ?',
-              indice1: 'Dans l\'esprit du Charier',
+              indice1: 'Dans l\'esprit du Chartier',
               indice2: 'pigalle',
               infos: '',
             ),
