@@ -20,7 +20,7 @@ class _DancePageState extends State<DancePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const EnigmeTitle('C - LE DISCO'),
+            const EnigmeTitle('B - LE DISCO'),
             const SizedBox(height: 20),
             const Paragraphe(
                 '\nNous y sommes passés,\nMythique,'

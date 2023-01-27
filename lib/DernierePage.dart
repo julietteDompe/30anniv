@@ -35,21 +35,7 @@ class _DernierePageState extends State<DernierePage> {
               ),
             ),
             const SizedBox(height: 20),
-            const ParagrapheEnigme('Ce site de « dépravation et péché » comme certains aiment le souligner, aurait été le berceau du Sacré ?! Quel meilleur endroit pour cacher une relique que tout son opposé.'),
-            const SizedBox(height: 20),
-            const ImageEnigme("images/cendres2.jpg"),
-            const SizedBox(height: 20),
-            const ParagrapheEnigme('La scène et les loges des femmes situées au sous sol n’ont pas brûlé, les armatures en métal sont encore debout.'
-                'Je découvre les ravages de l’incendies et descend voir les loges.\n\n'
-                'Dans la loge, un des boulons des piliers en métal en hauteur semblent mal visé.'
-                ' Il donne sur une porte dissimulée dans l’armature.\n\n'
-                'Dans ce petit renfoncement gardé est disposé une feuille et une bougie.'
-                'Comme si l’on nous narguait pour l’incendie.'
-                '\nToujours le même logo sur la feuille. Après des recherche, '
-                'je me rends compte que c’est bien depuis le début l’ordre de Malte.'
-                'Sur la feuille est écrit \‘ce qui est précieux peut être relevé par bien des manières\’'),
-            const SizedBox(height: 20),
-            const QuestionEnigme(
+           const QuestionEnigme(
               question: 'Où dois-je me rendre (Nous sommes en 1916) ?',
               indice1: "Ca ressemble á deux chiffres",
               indice2: 'pt une long et lat',
